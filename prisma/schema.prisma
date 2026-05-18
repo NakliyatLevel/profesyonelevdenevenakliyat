@@ -1,0 +1,339 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model ContactSubmission {
+  id        String   @id
+  name      String
+  email     String
+  phone     String?
+  subject   String?
+  message   String
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}
+
+model Country {
+  id            String   @id
+  code          String   @unique
+  name          String
+  nameTr        String
+  basePrice     Float    @default(0)
+  pricePerKm    Float    @default(0)
+  customsFee    Float    @default(0)
+  insuranceRate Float    @default(0)
+  active        Boolean  @default(true)
+  order         Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime
+
+  @@index([active])
+  @@index([code])
+  @@index([order])
+}
+
+model FAQ {
+  id        String   @id
+  question  String
+  answer    String
+  category  String?
+  order     Int      @default(0)
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+
+  @@index([active])
+  @@index([category])
+  @@index([order])
+}
+
+model Feature {
+  id          String   @id
+  title       String
+  description String
+  icon        String
+  order       Int      @default(0)
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime
+
+  @@index([active])
+  @@index([order])
+}
+
+model Gallery {
+  id          String   @id
+  title       String
+  description String?
+  image       String
+  category    String?
+  order       Int      @default(0)
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime
+
+  @@index([active])
+  @@index([category])
+  @@index([order])
+}
+
+model Media {
+  id           String   @id
+  filename     String   @unique
+  originalName String
+  url          String
+  alt          String?
+  size         Int
+  mimeType     String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime
+
+  @@index([createdAt])
+  @@index([filename])
+}
+
+model Page {
+  id          String   @id
+  slug        String   @unique
+  title       String
+  content     Json
+  seoTitle    String?
+  seoDesc     String?
+  seoKeywords String?
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime
+
+  @@index([published])
+  @@index([slug])
+}
+
+model Partner {
+  id        String   @id
+  name      String
+  logo      String?
+  website   String?
+  order     Int      @default(0)
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+
+  @@index([active])
+  @@index([order])
+}
+
+model Post {
+  id          String    @id
+  slug        String    @unique
+  title       String
+  excerpt     String?
+  content     String
+  image       String?
+  author      String    @default("Admin")
+  published   Boolean   @default(false)
+  publishedAt DateTime?
+  seoTitle    String?
+  seoDesc     String?
+  seoKeywords String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime
+
+  @@index([publishedAt])
+  @@index([published])
+  @@index([slug])
+}
+
+model PricingSetting {
+  id        String   @id
+  type      String
+  key       String
+  value     Json
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+
+  @@unique([type, key])
+  @@index([type])
+}
+
+model Process {
+  id          String   @id
+  title       String
+  description String
+  step        Int
+  icon        String
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime
+
+  @@index([active])
+  @@index([step])
+}
+
+model Quote {
+  id               String    @id
+  fullName         String
+  phone            String
+  email            String
+  preferredDate    DateTime?
+  fromAddress      String
+  fromFloor        Int
+  fromElevator     Boolean
+  toAddress        String
+  toFloor          Int
+  toElevator       Boolean
+  distance         Float?
+  propertyType     String
+  rooms            Int
+  furnitureCount   Int
+  hasFragileItems  Boolean   @default(false)
+  hasPiano         Boolean   @default(false)
+  hasAntiques      Boolean   @default(false)
+  specialItems     String?
+  needsPacking     Boolean   @default(false)
+  needsDisassembly Boolean   @default(false)
+  needsStorage     Boolean   @default(false)
+  needsInsurance   Boolean   @default(false)
+  additionalNotes  String?
+  status           String    @default("pending")
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime
+
+  @@index([createdAt])
+  @@index([email])
+  @@index([status])
+}
+
+model Review {
+  id        String   @id
+  name      String
+  comment   String
+  rating    Int      @default(5)
+  location  String?
+  approved  Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+
+  @@index([approved])
+  @@index([rating])
+}
+
+model Service {
+  id              String   @id
+  slug            String   @unique
+  name            String
+  description     String?
+  icon            String?
+  order           Int      @default(0)
+  active          Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime
+  content         String?
+  image           String?
+  metaDescription String?
+  metaTitle       String?
+  benefits        String?
+  showOnHomepage  Boolean  @default(true)
+
+  @@index([active])
+  @@index([order])
+  @@index([showOnHomepage])
+  @@index([slug])
+}
+
+model ServiceArea {
+  id              String   @id
+  city            String
+  slug            String   @unique
+  description     String?
+  active          Boolean  @default(true)
+  order           Int      @default(0)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime
+  content         String?
+  image           String?
+  metaDescription String?
+  metaTitle       String?
+
+  @@index([active])
+  @@index([order])
+  @@index([slug])
+}
+
+model SiteSetting {
+  id        String   @id
+  key       String   @unique
+  value     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+
+  @@index([key])
+}
+
+model Solution {
+  id              String   @id
+  slug            String   @unique
+  title           String
+  description     String?
+  content         String?
+  image           String?
+  icon            String?
+  metaTitle       String?
+  metaDescription String?
+  order           Int      @default(0)
+  active          Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime
+
+  @@index([active])
+  @@index([order])
+  @@index([slug])
+}
+
+model Statistic {
+  id        String   @id
+  title     String
+  value     String
+  icon      String?
+  order     Int      @default(0)
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+
+  @@index([active])
+  @@index([order])
+}
+
+model TeamMember {
+  id        String   @id
+  name      String
+  position  String
+  bio       String?
+  image     String?
+  order     Int      @default(0)
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+
+  @@index([active])
+  @@index([order])
+}
+
+model User {
+  id            String    @id
+  email         String    @unique
+  name          String
+  password      String
+  role          String    @default("admin")
+  emailVerified DateTime?
+  image         String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime
+
+  @@index([email])
+}
