@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { randomUUID } from 'crypto'
 import { prisma } from '@/lib/db'
 import { sendHeroQuickQuoteEmail } from '@/lib/email/send'
 
@@ -15,6 +16,7 @@ export async function POST(request: Request) {
 
     const quote = await prisma.quote.create({
       data: {
+        id: randomUUID(),
         fullName: fullName.trim(),
         phone: phone.trim(),
         email: body.email?.trim() || 'hero-form@levelnakliyat.com',
@@ -38,6 +40,7 @@ export async function POST(request: Request) {
         needsStorage: false,
         needsInsurance: false,
         additionalNotes: null,
+        updatedAt: new Date(),
       },
     })
 

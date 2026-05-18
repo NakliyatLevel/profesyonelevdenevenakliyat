@@ -1,4 +1,5 @@
 import { PrismaClient } from '@prisma/client'
+import { randomUUID } from 'crypto'
 
 const prisma = new PrismaClient()
 
@@ -31,10 +32,11 @@ async function seedAllSections() {
   ]
 
   for (const service of services) {
+    const now = new Date()
     await prisma.service.upsert({
       where: { slug: service.slug },
-      update: service,
-      create: service,
+      update: { ...service, updatedAt: now },
+      create: { id: randomUUID(), ...service, updatedAt: now },
     })
   }
   console.log('3 services added')
@@ -87,7 +89,7 @@ async function seedAllSections() {
 
   for (const review of reviews) {
     await prisma.review.create({
-      data: review,
+      data: { id: randomUUID(), ...review, updatedAt: new Date() },
     })
   }
   console.log('6 reviews added')
@@ -146,7 +148,7 @@ async function seedAllSections() {
 
   for (const item of gallery) {
     await prisma.gallery.create({
-      data: item,
+      data: { id: randomUUID(), ...item, updatedAt: new Date() },
     })
   }
   console.log('8 gallery items added')
@@ -193,7 +195,7 @@ async function seedAllSections() {
 
   for (const faq of faqs) {
     await prisma.fAQ.create({
-      data: faq,
+      data: { id: randomUUID(), ...faq, updatedAt: new Date() },
     })
   }
   console.log('6 FAQs added')
@@ -231,7 +233,7 @@ async function seedAllSections() {
 
   for (const post of posts) {
     await prisma.post.create({
-      data: post,
+      data: { id: randomUUID(), ...post, updatedAt: new Date() },
     })
   }
   console.log('3 blog posts added')

@@ -1,6 +1,7 @@
 import { prisma } from '@/lib/db'
 import { cache } from 'react'
 import { unstable_noStore as noStore } from 'next/cache'
+import { randomUUID } from 'crypto'
 
 /**
  * Site ayarlarını veritabanından getirir
@@ -40,10 +41,11 @@ export async function getSiteSetting(key: string) {
  * Site ayarını günceller veya oluşturur
  */
 export async function updateSiteSetting(key: string, value: string) {
+  const now = new Date()
   return await prisma.siteSetting.upsert({
     where: { key },
-    update: { value, updatedAt: new Date() },
-    create: { key, value },
+    update: { value, updatedAt: now },
+    create: { id: randomUUID(), key, value, updatedAt: now },
   })
 }
 
@@ -51,13 +53,14 @@ export async function updateSiteSetting(key: string, value: string) {
  * Çoklu site ayarlarını günceller
  */
 export async function updateSiteSettings(settings: Record<string, string>) {
-  const updates = Object.entries(settings).map(([key, value]) =>
-    prisma.siteSetting.upsert({
+  const updates = Object.entries(settings).map(([key, value]) => {
+    const now = new Date()
+    return prisma.siteSetting.upsert({
       where: { key },
-      update: { value, updatedAt: new Date() },
-      create: { key, value },
+      update: { value, updatedAt: now },
+      create: { id: randomUUID(), key, value, updatedAt: now },
     })
-  )
+  })
 
   return await prisma.$transaction(updates)
 }

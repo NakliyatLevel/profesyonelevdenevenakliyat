@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { randomUUID } from 'crypto'
 import { prisma } from '@/lib/db'
 
 export async function GET() {
@@ -24,11 +25,13 @@ export async function POST(request: NextRequest) {
 
     const partner = await prisma.partner.create({
       data: {
+        id: randomUUID(),
         name,
         logo,
         website,
         order: order || 0,
         active: active !== undefined ? active : true,
+        updatedAt: new Date(),
       },
     })
 

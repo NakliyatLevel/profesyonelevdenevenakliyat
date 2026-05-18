@@ -1,4 +1,5 @@
 import { redirect } from 'next/navigation'
+import { randomUUID } from 'crypto'
 import { prisma } from '@/lib/db'
 
 async function createPricing(formData: FormData) {
@@ -13,9 +14,11 @@ async function createPricing(formData: FormData) {
 
   await prisma.pricingSetting.create({
     data: {
+      id: randomUUID(),
       type: formData.get('type') as string,
       key: formData.get('key') as string,
       value: value,
+      updatedAt: new Date(),
     },
   })
   redirect('/karakar/fiyatlandirma')

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { randomUUID } from 'crypto'
 import { prisma } from '@/lib/db'
 
 export async function GET() {
@@ -24,6 +25,7 @@ export async function POST(request: NextRequest) {
 
     const area = await prisma.serviceArea.create({
       data: {
+        id: randomUUID(),
         city,
         slug,
         description: description || null,
@@ -33,6 +35,7 @@ export async function POST(request: NextRequest) {
         metaDescription: metaDescription || null,
         order: order || 0,
         active: active !== undefined ? active : true,
+        updatedAt: new Date(),
       },
     })
 

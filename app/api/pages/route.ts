@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { randomUUID } from 'crypto'
 import { prisma } from '@/lib/db'
 
 export async function GET() {
@@ -17,6 +18,7 @@ export async function POST(request: Request) {
     const body = await request.json()
     const page = await prisma.page.create({
       data: {
+        id: randomUUID(),
         slug: body.slug,
         title: body.title,
         content: body.content,
@@ -24,6 +26,7 @@ export async function POST(request: Request) {
         seoDesc: body.seoDesc || null,
         seoKeywords: body.seoKeywords || null,
         published: body.published || false,
+        updatedAt: new Date(),
       },
     })
     return NextResponse.json(page)

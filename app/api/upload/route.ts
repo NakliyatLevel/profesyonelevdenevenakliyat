@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { put } from '@vercel/blob'
+import { randomUUID } from 'crypto'
 import { prisma } from '@/lib/db'
 
 function slugify(text: string): string {
@@ -49,12 +50,14 @@ export async function POST(request: NextRequest) {
 
     const media = await prisma.media.create({
       data: {
+        id: randomUUID(),
         filename,
         originalName,
         url,
         alt: alt || nameWithoutExt,
         size: file.size,
         mimeType: file.type,
+        updatedAt: new Date(),
       },
     })
 

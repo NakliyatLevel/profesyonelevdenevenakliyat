@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { randomUUID } from 'crypto'
 import { prisma } from '@/lib/db'
 
 export async function GET() {
@@ -19,11 +20,13 @@ export async function POST(request: NextRequest) {
 
     const feature = await prisma.feature.create({
       data: {
+        id: randomUUID(),
         title: body.title,
         description: body.description,
         icon: body.icon,
         order: body.order || 0,
         active: body.active !== undefined ? body.active : true,
+        updatedAt: new Date(),
       },
     })
 

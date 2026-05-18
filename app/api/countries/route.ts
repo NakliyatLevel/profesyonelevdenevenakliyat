@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { randomUUID } from 'crypto'
 import { prisma } from '@/lib/db'
 
 export async function GET() {
@@ -17,6 +18,7 @@ export async function POST(request: Request) {
     const body = await request.json()
     const country = await prisma.country.create({
       data: {
+        id: randomUUID(),
         code: body.code,
         name: body.name,
         nameTr: body.nameTr,
@@ -26,6 +28,7 @@ export async function POST(request: Request) {
         insuranceRate: body.insuranceRate || 0,
         active: body.active ?? true,
         order: body.order || 0,
+        updatedAt: new Date(),
       },
     })
     return NextResponse.json(country)

@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { randomUUID } from 'crypto'
 import { prisma } from '@/lib/db'
 
 export async function POST(request: Request) {
@@ -64,6 +65,7 @@ export async function POST(request: Request) {
     // İletişim kaydı oluştur
     await prisma.contactSubmission.create({
       data: {
+        id: randomUUID(),
         name: body.name,
         email: body.email,
         phone: body.phone,

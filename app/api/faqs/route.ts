@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { randomUUID } from 'crypto'
 import { prisma } from '@/lib/db'
 
 export async function GET() {
@@ -17,11 +18,13 @@ export async function POST(request: Request) {
     const body = await request.json()
     const faq = await prisma.fAQ.create({
       data: {
+        id: randomUUID(),
         question: body.question,
         answer: body.answer,
         category: body.category || null,
         order: body.order || 0,
         active: body.active ?? true,
+        updatedAt: new Date(),
       },
     })
     return NextResponse.json(faq)

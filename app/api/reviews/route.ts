@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { randomUUID } from 'crypto'
 import { prisma } from '@/lib/db'
 
 export async function GET() {
@@ -18,11 +19,13 @@ export async function POST(request: Request) {
 
     const review = await prisma.review.create({
       data: {
+        id: randomUUID(),
         name: body.name,
         comment: body.comment,
         rating: body.rating || 5,
         location: body.location || null,
         approved: body.approved || false,
+        updatedAt: new Date(),
       },
     })
 

@@ -1,10 +1,12 @@
 import { redirect } from 'next/navigation'
+import { randomUUID } from 'crypto'
 import { prisma } from '@/lib/db'
 
 async function createCountry(formData: FormData) {
   'use server'
   await prisma.country.create({
     data: {
+      id: randomUUID(),
       code: formData.get('code') as string,
       name: formData.get('name') as string,
       nameTr: formData.get('nameTr') as string,
@@ -14,6 +16,7 @@ async function createCountry(formData: FormData) {
       insuranceRate: parseFloat(formData.get('insuranceRate') as string) || 0,
       active: formData.get('active') === 'on',
       order: parseInt(formData.get('order') as string) || 0,
+      updatedAt: new Date(),
     },
   })
   redirect('/karakar/ulkeler')
