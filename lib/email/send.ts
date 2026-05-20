@@ -6,11 +6,13 @@ export async function sendEmail({
   subject,
   html,
   text,
+  formName,
 }: {
   to: string
   subject: string
   html: string
   text?: string
+  formName?: string
 }) {
   try {
     const result = await getTransporter()
@@ -21,7 +23,9 @@ export async function sendEmail({
       select: { value: true },
     })
 
-    const fromAddress = smtpFromSetting?.value || result.smtpUser
+    const siteName = (await prisma.siteSetting.findUnique({ where: { key: 'site_title' }, select: { value: true } }))?.value || 'Profesyonel Evden Eve Nakliyat'
+    const baseFrom = smtpFromSetting?.value || result.smtpUser
+    const fromAddress = `${siteName} - ${formName || 'Form'} <${baseFrom}>`
 
     const info = await result.transporter.sendMail({
       from: fromAddress,
@@ -61,6 +65,7 @@ export async function sendContactEmail(data: {
     to: (await prisma.siteSetting.findUnique({ where: { key: 'smtp_to' }, select: { value: true } }))?.value || process.env.SMTP_USER || '',
     subject: `${siteName} - İletişim Formu`,
     html,
+    formName: 'İletişim Formu',
   })
 }
 
@@ -92,6 +97,7 @@ export async function sendQuoteEmail(data: {
     to: (await prisma.siteSetting.findUnique({ where: { key: 'smtp_to' }, select: { value: true } }))?.value || process.env.SMTP_USER || '',
     subject: `${siteName} - Teklif Formu`,
     html,
+    formName: 'Teklif Formu',
   })
 }
 
@@ -125,5 +131,6 @@ export async function sendHeroQuickQuoteEmail(data: {
     to: (await prisma.siteSetting.findUnique({ where: { key: 'smtp_to' }, select: { value: true } }))?.value || process.env.SMTP_USER || '',
     subject: `${siteName} - Hızlı Teklif Formu`,
     html,
+    formName: 'Hızlı Teklif Formu',
   })
 }
