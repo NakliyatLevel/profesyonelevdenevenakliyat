@@ -277,7 +277,7 @@ async function main() {
     },
     {
       name: 'Kurumsal Taşımacılık',
-      slug: 'kurumsal-tasimacilik',
+      slug: 'kurumsal-tasimaciligi',
       description: 'Çok lokasyonlu kurumsal yapılar, merkezî koordinasyon gerektiren taşıma operasyonları ister. Proje yöneticisi ataması ve günlük ilerleme raporlamasıyla şeffaf süreç yönetimi sağlanır.',
       metaTitle: 'Kurumsal Taşımacılık | Proje Bazlı Nakliyat Hizmeti',
       metaDescription: 'Büyük kurumsal taşımalarda proje yönetimi, çoklu lokasyon koordinasyonu ve özel sigorta paketi ile kesintisiz operasyon.',
