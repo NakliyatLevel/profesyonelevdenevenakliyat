@@ -1,0 +1,682 @@
+# Evden Eve Nakliyat - Profesyonel Taşımacılık Hizmetleri
+## Kapsamlı Site Bilgilendirmesi
+
+---
+
+## 🏢 SİTE GENEL BİLGİLERİ
+
+### Kurumsal Kimlik
+- **Site Adı**: Evden Eve Nakliyat
+- **Şirket Adı**: Çolak Nakliyat
+- **Hizmet Alanı**: Profesyonel Evden Eve Nakliyat ve Taşımacılık
+- **Coğrafi Kapsam**: Türkiye Geneli (81 İl)
+- **Kurulma Yılı**: 15+ Yıllık Deneyim
+- **Müşteri Memnuniyeti**: 600+ Mutlu Müşteri
+- **Google Puanı**: 4.9/5 Yıldız
+- **Sertifikasyon**: Sigortalı ve Sözleşmeli Hizmet
+
+### İletişim Bilgileri
+- **Telefon**: +90 555 123 4567
+- **Email**: bilgi@levelnakliyat.com.tr
+- **WhatsApp**: Canlı destek ve hızlı teklif
+- **Adres**: İstanbul, Türkiye
+- **Hizmet Saatleri**: 7/24 Müşteri Desteği
+
+### Web Sitesi Teknolojileri
+- **Framework**: Next.js 15.3.8 (React 18+)
+- **Veritabanı**: PostgreSQL (Neon Cloud)
+- **Kimlik Doğrulama**: NextAuth.js v5
+- **Email Servisi**: Zoho SMTP
+- **Hosting**: Vercel (Production)
+- **Tasarım**: TailwindCSS + Shadcn/UI
+- **SEO**: Next.js Metadata API + Schema.org JSON-LD
+
+### Temel Özellikler
+1. **Dinamik Fiyat Hesaplama**: Lokal ve uluslararası taşımacılık
+2. **Online Teklif Sistemi**: Anlık ve detaylı fiyat tahmini
+3. **Hızlı Teklif Formu**: Hero bölümünde 2 dakikalık teklif
+4. **Müşteri Yönetimi**: İletişim ve teklif taleplerinin kaydedilmesi
+5. **Blog Sistemi**: Taşımacılık ve ev taşıma ipuçları
+6. **Galeri**: Araçlar, paketleme ve hizmetler görselleri
+7. **Müşteri Yorumları**: Onaylı ve doğrulanmış değerlendirmeler
+8. **Admin Panel**: Tam kontrol ve yönetim sistemi
+9. **Responsive Tasarım**: Mobil, tablet ve desktop uyumlu
+10. **SEO Optimizasyonu**: Meta etiketler, sitemap, robots.txt
+
+---
+
+## 🛠️ ÇÖZÜMLERİMİZ (SOLUTIONS)
+
+Evden Eve Nakliyat, müşterilerin farklı ihtiyaçlarına yönelik kapsamlı çözümler sunmaktadır.
+
+### 1. **Şehirlerarası Nakliyat Çözümü**
+- **Açıklama**: Türkiye'nin herhangi bir şehrinden başka bir şehre güvenli ve hızlı taşımacılık
+- **Hedef Kitle**: Bireysel ve kurumsal müşteriler
+- **Özellikler**:
+  - Sigortalı taşımacılık
+  - Profesyonel ekip
+  - Hızlı ve güvenilir teslimat
+  - Uygun fiyatlandırma
+- **Hizmet Süresi**: Mesafeye bağlı (1-7 gün)
+- **Araç Seçenekleri**: Çeşitli boyut ve kapasitede araçlar
+
+### 2. **Uluslararası Nakliyat Çözümü**
+- **Açıklama**: Türkiye'den yurt dışına ve yurt dışından Türkiye'ye taşımacılık
+- **Desteklenen Ülkeler**: 50+ Ülke
+- **Özellikler**:
+  - Gümrük işlemleri
+  - Uluslararası sigorta
+  - Belgeler ve sertifikalar
+  - Profesyonel paketleme
+- **Fiyatlandırma**: Ülkeye, mesafeye ve eşya miktarına göre değişken
+- **Süre**: 5-30 gün (ülkeye bağlı)
+
+### 3. **Ofis Taşımacılığı Çözümü**
+- **Açıklama**: Kurumsal ofis ve iş yerlerinin taşınması
+- **Hedef Kitle**: Şirketler, kurumlar, işletmeler
+- **Özellikler**:
+  - Hızlı ve düzenli taşıma
+  - Ofis ekipmanlarının güvenli taşınması
+  - Minimum iş kesintisi
+  - Profesyonel proje yönetimi
+- **Ek Hizmetler**: Kurulum, montaj, demontaj
+- **Zaman Planlaması**: Hafta sonu ve tatil günlerinde hizmet
+
+### 4. **Depo Taşımacılığı Çözümü**
+- **Açıklama**: Ticari depo ve ürün taşımacılığı
+- **Hedef Kitle**: E-ticaret işletmeleri, perakendeciler, distribütörler
+- **Özellikler**:
+  - Toplu taşımacılık
+  - Depo yönetimi
+  - Envanter takibi
+  - Hızlı lojistik
+- **Kapasiteler**: Küçük ürünlerden büyük makinelere kadar
+- **Frekans**: Düzenli ve periyodik taşımacılık
+
+### 5. **Özel Eşya Taşımacılığı Çözümü**
+- **Açıklama**: Değerli ve hassas eşyaların özel taşınması
+- **Eşya Türleri**:
+  - Piyano ve müzik enstrümanları
+  - Antika ve sanat eserleri
+  - Kırılabilir ve cam eşyalar
+  - Elektrik cihazları
+  - Mobilya ve dekorasyon
+- **Özellikler**:
+  - Özel paketleme
+  - Yüksek sigorta kapsamı
+  - Deneyimli ekip
+  - Hassas işçilik
+- **Fiyatlandırma**: Eşyanın değerine ve türüne göre
+
+### 6. **Paketleme ve Depolama Çözümü**
+- **Açıklama**: Eşyaların profesyonel paketlenmesi ve geçici depolanması
+- **Paketleme Hizmetleri**:
+  - Profesyonel malzeme (kutular, köpük, bantlar)
+  - Etiketleme ve kataloglama
+  - Koruma ve güvenlik
+- **Depolama Hizmetleri**:
+  - Güvenli depo alanı
+  - İklim kontrollü ortam
+  - Sigortalı depolama
+  - Esnek süreler (günler, aylar, yıllar)
+- **Fiyatlandırma**: Aylık veya dönemsel
+
+### 7. **Montaj ve Demontaj Çözümü**
+- **Açıklama**: Mobilya ve ekipmanların montaj/demontaj işleri
+- **Hizmet Kapsamı**:
+  - Mobilya demontajı
+  - Taşıma sonrası montaj
+  - Eski mobilya kaldırılması
+  - Kurulum ve ayarlama
+- **Özellikler**:
+  - Hızlı ve profesyonel
+  - Tüm parçaların korunması
+  - Talimatlar ve rehberlik
+- **Fiyatlandırma**: Saatlik veya iş bazında
+
+### 8. **Sigorta ve Koruma Çözümü**
+- **Açıklama**: Taşıma sırasında tam kapsamlı sigorta
+- **Kapsam**:
+  - Tüm eşyalar sigortalı
+  - Hasar ve kayıp teminatı
+  - Hızlı talep işlemi
+  - Adil değerlendirme
+- **Sigorta Oranları**: Eşyanın değerine göre değişken
+- **Talep Süreci**: 24-48 saat içinde çözüm
+
+### 9. **Kurumsal Taşımacılık Çözümü**
+- **Açıklama**: Şirketlere özel taşımacılık paketleri
+- **Özellikler**:
+  - Sabit fiyatlandırma
+  - Düzenli hizmet
+  - Özel muhasebe
+  - Fatura ve belgelendirme
+  - Dedikeli ekip
+- **Avantajlar**: İndirimli fiyatlar, öncelikli hizmet
+- **Kontrat**: Yıllık veya dönemsel anlaşmalar
+
+### 10. **Acil ve Express Taşımacılık Çözümü**
+- **Açıklama**: Hızlı ve acil taşımacılık ihtiyaçları
+- **Özellikler**:
+  - 24 saat içinde hizmet
+  - Öncelikli işleme
+  - Doğrudan rota
+  - Minimum bekleme
+- **Ücretlendirme**: Premium fiyatlandırma
+- **Garantiler**: Zamanında teslimat garantisi
+
+---
+
+## 🎯 HİZMETLERİMİZ (SERVICES)
+
+Evden Eve Nakliyat, müşterilerin her aşamasında destek sağlayan geniş bir hizmet yelpazesi sunmaktadır.
+
+### 1. **Ücretsiz Teklif Alma Hizmeti**
+- **Açıklama**: Müşterilerin taşınma detaylarına göre anlık fiyat tahmini
+- **Nasıl Çalışır**:
+  1. Nereden-Nereye bilgileri girilir
+  2. Eşya miktarı ve türü seçilir
+  3. Ek hizmetler belirlenir
+  4. Anlık fiyat gösterilir
+- **Avantajlar**: Ücretsiz, hızlı, yükümlülüksüz
+- **Erişim**: Web sitesi, telefon, WhatsApp
+- **Yanıt Süresi**: Anlık (web) veya 5 dakika (telefon)
+
+### 2. **Profesyonel Danışmanlık Hizmeti**
+- **Açıklama**: Taşınma planlaması ve stratejisi konusunda uzman danışmanlık
+- **Danışmanlık Konuları**:
+  - Taşınma planlaması
+  - Eşya paketleme stratejisi
+  - Maliyeti optimize etme
+  - Zaman yönetimi
+  - Sigorta seçenekleri
+- **Uzmanlar**: 15+ yıllık deneyimli profesyoneller
+- **Erişim**: Telefon, WhatsApp, video görüşme
+- **Ücret**: Ücretsiz (teklif sonrası)
+
+### 3. **Yerinde Keşif Hizmeti**
+- **Açıklama**: Taşınacak eşyaların yerinde incelenmesi
+- **Süreç**:
+  1. Uzman ekip eve/işyerine gider
+  2. Eşyaları detaylı inceler
+  3. Fotoğraf ve not alır
+  4. Kesin fiyat teklifi hazırlar
+- **Avantajlar**: Daha doğru fiyatlandırma, sürpriz yok
+- **Zaman**: 30-60 dakika
+- **Ücret**: Ücretsiz (genellikle)
+
+### 4. **Paketleme Hizmeti**
+- **Açıklama**: Profesyonel malzeme ve teknikle eşyaların paketlenmesi
+- **Paketleme Türleri**:
+  - Standart paketleme
+  - Özel paketleme (kırılabilir eşyalar)
+  - Tam paketleme (tüm eşyalar)
+  - Kısmi paketleme (seçili eşyalar)
+- **Malzeme**: Kaliteli kutular, köpük, bantlar, etiketler
+- **Fiyatlandırma**: Saatlik veya eşya sayısına göre
+- **Ekip**: 2-4 kişi (iş hacmine göre)
+
+### 5. **Taşıma ve Kurulum Hizmeti**
+- **Açıklama**: Eşyaların taşınması ve yeni yerde kurulması
+- **Hizmet Adımları**:
+  1. Eşyaların araçlara yüklenmesi
+  2. Güvenli taşınma
+  3. Yeni yerde boşaltılması
+  4. Yerleştirilmesi ve kurulması
+- **Araç Seçenekleri**: 1 tondan 20 tona kadar
+- **Ekip Boyutu**: 2-8 kişi
+- **Zaman**: Mesafeye ve eşya miktarına göre
+
+### 6. **Montaj ve Demontaj Hizmeti**
+- **Açıklama**: Mobilya ve ekipmanların sökülmesi ve takılması
+- **Hizmet Kapsamı**:
+  - Yatak, dolap, masa demontajı
+  - Mutfak donanımları
+  - Raf ve askı sistemleri
+  - Elektrik cihazları
+- **Profesyonellik**: Tüm parçalar korunur, talimatlar verilir
+- **Zaman**: Mobilya sayısına göre (2-8 saat)
+- **Ücret**: Saatlik veya iş bazında
+
+### 7. **Depolama Hizmeti**
+- **Açıklama**: Eşyaların güvenli ve kontrollü ortamda depolanması
+- **Depo Özellikleri**:
+  - İklim kontrollü
+  - 24/7 güvenlik
+  - Sigortalı
+  - Erişim kontrollü
+- **Depolama Süresi**: Günler, haftalar, aylar, yıllar
+- **Fiyatlandırma**: Aylık veya dönemsel
+- **Erişim**: İstenildiğinde eşya alınabilir
+
+### 8. **Özel Eşya Taşımacılığı Hizmeti**
+- **Açıklama**: Piyano, antika, sanat eserleri gibi değerli eşyaların taşınması
+- **Eşya Türleri**:
+  - Piyano ve müzik enstrümanları
+  - Antika mobilya
+  - Sanat eserleri ve heykeller
+  - Cam ve kristal eşyalar
+  - Elektronik cihazlar
+- **Özel Paketleme**: Eşyanın türüne göre özel koruma
+- **Sigorta**: Yüksek değer teminatı
+- **Ekip**: Özel eğitimli profesyoneller
+
+### 9. **Uluslararası Taşımacılık Hizmeti**
+- **Açıklama**: Türkiye'den yurt dışına ve yurt dışından Türkiye'ye taşımacılık
+- **Hizmet Kapsamı**:
+  - Gümrük işlemleri
+  - Uluslararası sigorta
+  - Belge hazırlama
+  - Takip ve izleme
+- **Desteklenen Ülkeler**: 50+ Ülke (Avrupa, Asya, Ortadoğu)
+- **Taşıma Yöntemi**: Karayolu, deniz, hava (kombinasyon)
+- **Süre**: 5-30 gün (ülkeye göre)
+
+### 10. **Müşteri Desteği Hizmeti**
+- **Açıklama**: 7/24 müşteri destek ve danışmanlık
+- **İletişim Kanalları**:
+  - Telefon: +90 555 123 4567
+  - WhatsApp: Canlı sohbet
+  - Email: Detaylı sorular
+  - Web Sitesi: Teklif formu
+- **Yanıt Süresi**: Anlık (WhatsApp) - 24 saat (Email)
+- **Diller**: Türkçe, İngilizce
+- **Sorun Çözümü**: Hızlı ve etkili
+
+### 11. **Sigorta ve Koruma Hizmeti**
+- **Açıklama**: Taşıma sırasında eşyaların sigortalanması
+- **Sigorta Türleri**:
+  - Standart sigorta (tüm eşyalar)
+  - Yüksek değer sigorta
+  - Özel eşya sigorta
+- **Kapsam**: Hasar, kayıp, kaza
+- **Talep Süreci**: Basit ve hızlı
+- **Ödeme**: 24-48 saat
+
+### 12. **Kurumsal Hizmetler**
+- **Açıklama**: Şirketlere özel taşımacılık çözümleri
+- **Hizmetler**:
+  - Ofis taşımacılığı
+  - Depo yönetimi
+  - Düzenli lojistik
+  - Özel fiyatlandırma
+- **Avantajlar**: İndirimli fiyatlar, öncelikli hizmet, dedikeli ekip
+- **Kontrat**: Yıllık veya dönemsel anlaşmalar
+- **Muhasebe**: Özel fatura ve belgelendirme
+
+---
+
+## 🗺️ HİZMET BÖLGELERİMİZ (SERVICE AREAS)
+
+Evden Eve Nakliyat, Türkiye'nin 81 ilinin tamamında profesyonel taşımacılık hizmeti sunmaktadır.
+
+### Marmara Bölgesi
+- **İstanbul**: Avrupa ve Anadolu yakasında tüm ilçelere hizmet
+  - Kapsamı: Beşiktaş, Beyoğlu, Fatih, Eyüpsultan, Eminönü, Çapa, Aksaray, Sultanahmet, Taksim, Galata, Beyazıt, Eminönü, Balat, Fener, Ayvansaray, Eyüpsultan, Kağıthane, Sarıyer, Beşiktaş, Ortaköy, Arnavutköy, Çatalca, Silivri, Büyükçekmece, Esenyurt, Avcılar, Bakırköy, Zeytinburnu, Fatih, Bayrampaşa, Gaziosmanpaşa, Sultangazi, Esenler, Güngören, Bağcılar, Bahçelievler, Küçükçekmece, Maltepe, Pendik, Tuzla, Çekmeköy, Ümraniye, Beykoz, Şile, Ataşehir, Kadıköy, Kartal, Kurtköy
+  - Hizmet Saati: 24/7
+  - Özel Hizmetler: Express taşımacılık, acil taşıma
+
+- **Bursa**: Şehir merkezinden tüm ilçelere hizmet
+  - Kapsamı: Osmangazi, Nilüfer, Yıldırım, İnegöl, Gemlik, Mudanya, Karacabey, Kestel
+  - Hizmet Saati: 08:00 - 20:00
+  - Özel Hizmetler: Ofis taşımacılığı, depo taşımacılığı
+
+- **Kocaeli**: Tüm ilçelere profesyonel hizmet
+  - Kapsamı: İzmit, Gebze, Körfez, Darıca, Dilovası, Gölcük, Kandıra, Karamürsel, Başiskele, Çayırova
+  - Hizmet Saati: 08:00 - 19:00
+  - Özel Hizmetler: Sanayi bölgesi taşımacılığı
+
+- **Tekirdağ**: Şehir ve ilçelere hizmet
+  - Kapsamı: Tekirdağ merkezi, Çerkezköy, Ergene, Malkara, Muratli, Şarköy, Hayrabolu
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Edirne**: Tüm bölgeye hizmet
+  - Kapsamı: Edirne merkezi, Keşan, Ipsala, Uzunkopru, Havsa
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Balıkesir**: Geniş hizmet ağı
+  - Kapsamı: Balıkesir merkezi, Bandırma, Erdek, Gönen, Bigadiç, Burhaniye, Ayvalık, Altıeylül, Soma, Manisa sınırına kadar
+  - Hizmet Saati: 08:00 - 19:00
+
+### Ege Bölgesi
+- **İzmir**: Geniş kapsamlı hizmet
+  - Kapsamı: Konak, Alsancak, Alsancak, Bornova, Çeşme, Foça, Gaziemir, Güzelbahçe, Karabağlar, Karşıyaka, Kınalı, Kiraz, Menemen, Narlıdere, Ödemiş, Selçuk, Seferihisar, Tire, Torbalı, Urla, Bayındır, Bergama, Dikili, Izmir merkezi
+  - Hizmet Saati: 24/7
+  - Özel Hizmetler: Liman taşımacılığı, turizm taşımacılığı
+
+- **Manisa**: Tüm ilçelere hizmet
+  - Kapsamı: Manisa merkezi, Akhisar, Alaşehir, Demirci, Kula, Sarıgöl, Selendi, Soma, Turgutlu
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Aydın**: Bölgesel hizmet
+  - Kapsamı: Aydın merkezi, Bozdoğan, Çine, Didim, Germencik, Karacasu, Koçarlı, Kuşadası, Nazilli, Söke, Yenipazar
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Muğla**: Turizm bölgesi hizmetleri
+  - Kapsamı: Muğla merkezi, Bodrum, Dalyan, Datça, Fethiye, Köyceğiz, Marmaris, Milas, Ortaca, Ula, Yatağan
+  - Hizmet Saati: 08:00 - 20:00
+  - Özel Hizmetler: Turizm tesisleri taşımacılığı
+
+- **Denizli**: Geniş hizmet ağı
+  - Kapsamı: Denizli merkezi, Acıpayam, Buldan, Çal, Çameli, Honaz, Kale, Pamukkale, Sarayköy, Serinhisar, Tavas, Bekilli
+  - Hizmet Saati: 08:00 - 19:00
+
+### Akdeniz Bölgesi
+- **Antalya**: Turizm ve ticaret merkezi
+  - Kapsamı: Antalya merkezi, Alanya, Belek, Finike, Gazipaşa, Kalkan, Kaş, Kemer, Korkuteli, Kumluca, Manavgat, Muratpaşa, Serik, Side, Tekirova
+  - Hizmet Saati: 24/7
+  - Özel Hizmetler: Otel taşımacılığı, turizm taşımacılığı, lojistik
+
+- **Mersin**: Ticari merkez
+  - Kapsamı: Mersin merkezi, Aydıncık, Bozyazı, Çamlıyayla, Erdemli, Gülnar, Mut, Silifke, Tarsus, Toroslar, Yenişehir
+  - Hizmet Saati: 08:00 - 20:00
+  - Özel Hizmetler: Liman taşımacılığı, gümrük işlemleri
+
+- **Adana**: Tarım ve ticaret bölgesi
+  - Kapsamı: Adana merkezi, Aladağ, Ceyhan, Feke, İmamlı, Karaisalı, Kozan, Pozantı, Saimbeyli, Sarıçam, Yüregir
+  - Hizmet Saati: 08:00 - 20:00
+  - Özel Hizmetler: Tarım ürünleri taşımacılığı
+
+- **Hatay**: Sınır bölgesi hizmetleri
+  - Kapsamı: Hatay merkezi, Antakya, Arsuz, Dörtyol, İskenderun, Kırıkhan, Reyhanlı, Samandağ, Yayladağı
+  - Hizmet Saati: 08:00 - 19:00
+  - Özel Hizmetler: Sınır ötesi taşımacılığı
+
+### İç Anadolu Bölgesi
+- **Ankara**: Başkent ve idari merkez
+  - Kapsamı: Ankara merkezi, Altındağ, Çankaya, Keçiören, Mamak, Yenimahalle, Akyurt, Beypazarı, Çubuk, Elmadağ, Evren, Gölbaşı, Güdül, Haymana, Kalecik, Kızılcahamam, Nallıhan, Polatlı, Şereflikoçhisar, Sincan, Çankırı sınırına kadar
+  - Hizmet Saati: 24/7
+  - Özel Hizmetler: Kurumsal taşımacılık, ofis taşımacılığı
+
+- **Konya**: Tarım ve ticaret merkezi
+  - Kapsamı: Konya merkezi, Akşehir, Beyşehir, Bozkır, Çeltik, Çumra, Derbent, Doğanhisar, Emirgazi, Ereğli, Hadim, Ilgın, Kadınhanı, Karapınar, Kulu, Meram, Sarayönü, Selçuklu, Seydişehir, Taşkent, Tuzlukçu, Yalıhüyük, Yunak
+  - Hizmet Saati: 08:00 - 19:00
+
+- **Kayseri**: Sanayi merkezi
+  - Kapsamı: Kayseri merkezi, Akkışla, Bünyan, Develi, Felahiye, İncesu, Kocasinan, Melikgazi, Özvatan, Pınarbaşı, Sarıoğlan, Sarız, Talas, Yeşilhisar
+  - Hizmet Saati: 08:00 - 19:00
+  - Özel Hizmetler: Sanayi bölgesi taşımacılığı
+
+- **Sivas**: Bölgesel merkez
+  - Kapsamı: Sivas merkezi, Akincilar, Altınyayla, Divriği, Gökçedağ, Gölova, Hafik, Kangal, Koyulhisar, Suşehri, Şarkışla, Ulaş, Yıldızeli, Zara
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Kırıkkale**: Sanayi ve lojistik merkezi
+  - Kapsamı: Kırıkkale merkezi, Bahşili, Balışeyh, Çelebi, Delice, Keskin, Sulakyurt
+  - Hizmet Saati: 08:00 - 18:00
+  - Özel Hizmetler: Sanayi taşımacılığı
+
+- **Nevşehir**: Turizm bölgesi
+  - Kapsamı: Nevşehir merkezi, Acıgöl, Avanos, Çardak, Derinkuyu, Gülşehir, Hacıbektaş, Haymana, Kozaklı, Ürgüp
+  - Hizmet Saati: 08:00 - 18:00
+  - Özel Hizmetler: Turizm taşımacılığı
+
+- **Niğde**: Bölgesel hizmet
+  - Kapsamı: Niğde merkezi, Altunhisar, Bor, Çamardı, Çiftlik, Irmak, Koyulhisar, Ulukışla
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Aksaray**: Bölgesel merkez
+  - Kapsamı: Aksaray merkezi, Ağaçören, Eskiil, Gülağaç, Güzelyurt, Ortaköy, Sarıyahşi
+  - Hizmet Saati: 08:00 - 18:00
+
+### Karadeniz Bölgesi
+- **Trabzon**: Karadeniz ticaret merkezi
+  - Kapsamı: Trabzon merkezi, Akçaabat, Araklı, Besni, Çaykara, Düzköy, Maçka, Of, Rize sınırına kadar
+  - Hizmet Saati: 08:00 - 19:00
+  - Özel Hizmetler: Liman taşımacılığı
+
+- **Rize**: Çay bölgesi
+  - Kapsamı: Rize merkezi, Ayder, Çamlıhemşin, Çayeli, Derepazarı, Fındıklı, Güneysu, Hemşin, Iyidere, Kalkandere, Pazar
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Ordu**: Karadeniz kıyısı
+  - Kapsamı: Ordu merkezi, Akkuş, Aybastı, Çamaş, Çatalpınar, Fatsa, Gölköy, Gülyalı, Kabadüz, Korgan, Kumru, Mesudiye, Perşembe, Ulubey, Ünye
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Giresun**: Karadeniz bölgesi
+  - Kapsamı: Giresun merkezi, Alucra, Bulancak, Çamoluk, Dereli, Doğanşar, Espiye, Görele, Güce, Keşap, Piraziz, Şebinkarahisar, Tirebolu, Yağlıdere
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Samsun**: Karadeniz ticaret merkezi
+  - Kapsamı: Samsun merkezi, Alaçam, Asarcık, Ayvacık, Bafra, Çarşamba, Havza, Kavak, Lâdik, Ondokuzmayıs, Salıpazarı, Terme, Vezirköprü, Yakakent
+  - Hizmet Saati: 08:00 - 20:00
+  - Özel Hizmetler: Liman taşımacılığı
+
+- **Sinop**: Kuzey Karadeniz
+  - Kapsamı: Sinop merkezi, Ayancık, Boyabat, Dikmen, Erfelek, Gerze, Saraydüzü
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Kastamonu**: Karadeniz iç bölgesi
+  - Kapsamı: Kastamonu merkezi, Abana, Araç, Azdavay, Bozkurt, Cide, Çankırı sınırına kadar, Daday, Devrekani, Hanönü, İnebolu, Küre, Pınarbaşı, Seydiler, Şenpazar, Taşköprü, Tosya
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Amasya**: İç Karadeniz
+  - Kapsamı: Amasya merkezi, Göynücek, Gümüşhacıköy, Hamamözü, Merzifon, Suluova, Taşova
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Tokat**: Karadeniz iç bölgesi
+  - Kapsamı: Tokat merkezi, Almus, Artova, Başçiftlik, Erbaa, Niksar, Pazar, Reşadiye, Turhal, Zile
+  - Hizmet Saati: 08:00 - 18:00
+
+### Doğu Anadolu Bölgesi
+- **Erzurum**: Doğu Anadolu merkezi
+  - Kapsamı: Erzurum merkezi, Aşkale, Aziziye, Çat, Horasan, İspir, Kaçkars, Köprüköy, Narman, Olur, Pasinler, Şenkaya, Tekman, Tortum, Uzundere
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Erzincan**: Doğu Anadolu
+  - Kapsamı: Erzincan merkezi, Alacakaya, Çayırlı, İliç, Kemah, Kemaliye, Refahiye, Tercan, Üzümlü
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Malatya**: Doğu Anadolu ticaret merkezi
+  - Kapsamı: Malatya merkezi, Akçadağ, Arapgir, Arguvan, Battalgazi, Darende, Doğanşehir, Hekimhan, Kale, Kuluncak, Pütürge, Yazıhan, Yeşilyurt
+  - Hizmet Saati: 08:00 - 19:00
+
+- **Tunceli**: Dağlık bölge
+  - Kapsamı: Tunceli merkezi, Çemişgezek, Elazığ sınırına kadar, Hozat, Mazgirt, Ovacık, Pertek, Pülümür
+  - Hizmet Saati: 08:00 - 17:00
+
+- **Elazığ**: Doğu Anadolu
+  - Kapsamı: Elazığ merkezi, Ağın, Arıcak, Baskil, Karakaya, Keban, Kovancılar, Maden, Palu, Sivrice
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Van**: Doğu Anadolu sınır şehri
+  - Kapsamı: Van merkezi, Bahçesaray, Başkale, Çaldıran, Çatak, Edremit, Erciş, Gevaş, Gürpınar, Muradiye, Özalp, Saray, Tuşba
+  - Hizmet Saati: 08:00 - 18:00
+  - Özel Hizmetler: Sınır ötesi taşımacılığı
+
+- **Hakkari**: Güneydoğu Anadolu sınırı
+  - Kapsamı: Hakkari merkezi, Çukurca, Derecik, Şemdinli, Yüksekova
+  - Hizmet Saati: 08:00 - 17:00
+
+- **Bitlis**: Doğu Anadolu
+  - Kapsamı: Bitlis merkezi, Adilcevaz, Ahlat, Güroymak, Hizan, Mutki, Tatvan
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Bingöl**: Doğu Anadolu
+  - Kapsamı: Bingöl merkezi, Adaklı, Genç, Karlıova, Kiğı, Solhan, Yayladere, Yedisu
+  - Hizmet Saati: 08:00 - 18:00
+
+### Güneydoğu Anadolu Bölgesi
+- **Gaziantep**: Güneydoğu Anadolu ticaret merkezi
+  - Kapsamı: Gaziantep merkezi, Araban, Islahiye, Jeblus, Karkamış, Nurdağı, Oğuzeli, Şahinbey, Şehitkamil, Yavuzeli
+  - Hizmet Saati: 08:00 - 20:00
+  - Özel Hizmetler: Sanayi taşımacılığı, gümrük işlemleri
+
+- **Şanlıurfa**: Güneydoğu Anadolu merkezi
+  - Kapsamı: Şanlıurfa merkezi, Akçakale, Birecik, Bozova, Ceylanpınar, Eyyübiye, Halfeti, Haliliye, Hilvan, Karaköprü, Siverek, Suruç, Viranşehir
+  - Hizmet Saati: 08:00 - 19:00
+
+- **Diyarbakır**: Güneydoğu Anadolu merkezi
+  - Kapsamı: Diyarbakır merkezi, Bağlar, Çermik, Çınar, Dicle, Eğil, Ergani, Hani, Hazro, Kayapınar, Kocaköy, Kulp, Lice, Silvan, Sur, Yenişehir
+  - Hizmet Saati: 08:00 - 19:00
+
+- **Mardin**: Güneydoğu sınır şehri
+  - Kapsamı: Mardin merkezi, Artuklu, Dargeçit, Derik, Kızıltepe, Mazıdağı, Midyat, Nusaybin, Ömerli, Savur, Yeşilli
+  - Hizmet Saati: 08:00 - 18:00
+  - Özel Hizmetler: Sınır ötesi taşımacılığı
+
+- **Batman**: Güneydoğu Anadolu
+  - Kapsamı: Batman merkezi, Besni, Gercüş, Hasankeyf, Kozluk, Sason
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Siirt**: Güneydoğu Anadolu
+  - Kapsamı: Siirt merkezi, Baykan, Eruh, Kurtalan, Pervari, Tillo
+  - Hizmet Saati: 08:00 - 17:00
+
+- **Şırnak**: Güneydoğu sınır şehri
+  - Kapsamı: Şırnak merkezi, Beytüşşebap, Cizre, Güçlükonak, İdil, Silopi, Uludere
+  - Hizmet Saati: 08:00 - 17:00
+  - Özel Hizmetler: Sınır ötesi taşımacılığı
+
+### Batı Anadolu Bölgesi
+- **Eskişehir**: Batı Anadolu merkezi
+  - Kapsamı: Eskişehir merkezi, Alpu, Beylikova, Çifteler, Emirdağ, Günyüzü, Han, İnönü, Mahmudiye, Mihalıççık, Odunpazarı, Sarıcakaya, Seyitgazi, Sivrihisar, Tepebaşı
+  - Hizmet Saati: 08:00 - 19:00
+
+- **Bilecik**: Batı Anadolu
+  - Kapsamı: Bilecik merkezi, Bozüyük, Gölpazarı, İnhisar, Osmancık, Pazaryeri, Söğüt, Yenipazar
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Kütahya**: Batı Anadolu
+  - Kapsamı: Kütahya merkezi, Altıntaş, Aslanapa, Çavdarhisar, Domaniç, Dumlupınar, Emet, Gediz, Hisarcık, Tavşanlı, Simav
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Afyonkarahisar**: Batı Anadolu
+  - Kapsamı: Afyonkarahisar merkezi, Başmakçı, Bayat, Bolvadin, Çay, Çobanlar, Dazkırı, Dinar, Emirdağ, Evciler, Hocalarımızı, İhsaniye, Kızılören, Sandıklı, Sinanpaşa, Sultandağı, Şuhut
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Uşak**: Batı Anadolu
+  - Kapsamı: Uşak merkezi, Banaz, Eşme, Karahallı, Sivaslı, Ulubey
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Isparta**: Batı Anadolu
+  - Kapsamı: Isparta merkezi, Aksu, Atabey, Eğirdir, Gelendost, Gönen, Keçiborlu, Senirkent, Sütçüler, Uluborlu, Yalvaç
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Burdur**: Batı Anadolu
+  - Kapsamı: Burdur merkezi, Ağlasun, Altınyayla, Bucak, Çavdır, Çeltikçi, Gölhisar, Karamanlı, Kemer, Tefenni, Yeşilova
+  - Hizmet Saati: 08:00 - 18:00
+
+### Ege Bölgesi (Devamı)
+- **Çanakkale**: Ege-Marmara sınırı
+  - Kapsamı: Çanakkale merkezi, Ayvacık, Bayramiç, Biga, Bozcaada, Çan, Daçbilek, Eceabat, Ezine, Gökçeada, Güzelköy, Lapseki, Yenice
+  - Hizmet Saati: 08:00 - 18:00
+
+- **Kırşehir**: İç Anadolu
+  - Kapsamı: Kırşehir merkezi, Akçakent, Akpınar, Bor, Çiçekdağ, Kaman, Mucur
+  - Hizmet Saati: 08:00 - 18:00
+
+### Hizmet Bölgeleri Özellikleri
+- **Tüm Bölgelerde**:
+  - Profesyonel ve deneyimli ekip
+  - Sigortalı taşımacılık
+  - Hızlı ve güvenilir hizmet
+  - 24/7 müşteri desteği
+  - Ücretsiz teklif
+  - Esnek zaman planlaması
+
+- **Bölgesel Özelleştirmeler**:
+  - Dağlık bölgelerde özel araçlar
+  - Kıyı bölgelerinde liman hizmetleri
+  - Sanayi bölgelerinde kurumsal çözümler
+  - Turizm bölgelerinde özel paketler
+  - Sınır şehirlerinde gümrük işlemleri
+
+---
+
+## 📊 GENEL İSTATİSTİKLER VE BAŞARILARI
+
+- **Toplam Müşteri**: 600+ Mutlu Müşteri
+- **Hizmet Verilen Şehir**: 81 İl
+- **Deneyim**: 15+ Yıl
+- **Araç Filosu**: 50+ Araç
+- **Profesyonel Ekip**: 100+ Çalışan
+- **Google Puanı**: 4.9/5 Yıldız
+- **Müşteri Memnuniyeti**: %99
+- **Sigortalı Taşımacılık**: %100
+- **Zamanında Teslimat**: %98
+
+---
+
+## 🔗 ÖNEMLI SAYFALAR VE BAĞLANTILAR
+
+- **Ana Sayfa**: https://profesyonelevdenevenakliyat.com/
+- **Hizmetlerimiz**: https://profesyonelevdenevenakliyat.com/hizmetlerimiz
+- **Çözümlerimiz**: https://profesyonelevdenevenakliyat.com/cozumlerimiz
+- **Hizmet Bölgeleri**: https://profesyonelevdenevenakliyat.com/hizmet-bolgeleri
+- **Teklif Al**: https://profesyonelevdenevenakliyat.com/teklif-al
+- **İletişim**: https://profesyonelevdenevenakliyat.com/iletisim
+- **Blog**: https://profesyonelevdenevenakliyat.com/blog
+- **Galeri**: https://profesyonelevdenevenakliyat.com/galeri
+- **Hakkımızda**: https://profesyonelevdenevenakliyat.com/hakkimizda
+
+---
+
+## 📞 İLETİŞİM BİLGİLERİ
+
+- **Telefon**: +90 555 123 4567
+- **Email**: bilgi@levelnakliyat.com.tr
+- **WhatsApp**: Canlı destek ve hızlı teklif
+- **Adres**: İstanbul, Türkiye
+- **Çalışma Saatleri**: 7/24 Müşteri Desteği
+
+---
+
+## 🎯 ANAHTAR KELIMELER VE SEO BİLGİLERİ
+
+### Hizmet Alanları
+- Evden eve nakliyat
+- Şehirlerarası taşımacılık
+- Uluslararası nakliyat
+- Ofis taşımacılığı
+- Depo taşımacılığı
+- Özel eşya taşımacılığı
+- Piyano taşımacılığı
+- Antika taşımacılığı
+- Paketleme hizmeti
+- Depolama hizmeti
+
+### Coğrafi Anahtar Kelimeler
+- İstanbul nakliyat
+- Ankara taşımacılık
+- İzmir evden eve nakliyat
+- Bursa taşımacılığı
+- Antalya nakliyat
+- Gaziantep taşımacılık
+- Türkiye geneli nakliyat
+- Uluslararası taşımacılık
+
+### Hizmet Türleri
+- Hızlı nakliyat
+- Ekonomik taşımacılık
+- Premium taşımacılık
+- Acil taşımacılık
+- Express nakliyat
+- Kurumsal taşımacılık
+- Sigortalı taşımacılık
+
+---
+
+## 💡 YAPAY ZEKA BOTLARİ İÇİN NOTLAR
+
+Bu llms.txt dosyası, Evden Eve Nakliyat hizmetleri hakkında kapsamlı ve detaylı bilgi içermektedir. AI botları ve arama motorları bu bilgileri kullanarak:
+
+1. **Daha İyi Arama Sonuçları**: Kullanıcılar taşımacılık hizmetleri aradığında site daha iyi sıralanacaktır
+2. **Doğru Bilgilendirme**: Müşteriler hizmetler hakkında tam ve doğru bilgi alacaktır
+3. **Yapay Zeka Eğitimi**: LLM modelleri bu bilgileri kullanarak daha iyi yanıtlar verebilecektir
+4. **Bağlam Anlayışı**: Hizmetler arasındaki ilişkiler ve bağlantılar daha iyi anlaşılacaktır
+5. **Müşteri Deneyimi**: Kullanıcılar ihtiyaçlarına uygun hizmetleri daha kolay bulacaktır
+
+---
+
+## 📝 GÜNCELLEME BİLGİSİ
+
+- **Son Güncelleme**: 20 Mayıs 2026
+- **Sürüm**: 1.0
+- **Dil**: Türkçe
+- **Erişilebilirlik**: Public (Tüm AI botları erişebilir)
+- **Güncelleme Sıklığı**: Aylık
+
+---
+
+**Bu dosya, Evden Eve Nakliyat hizmetleri hakkında en kapsamlı ve detaylı bilgilendirme kaynağıdır. Tüm yapay zeka botları, arama motorları ve LLM modelleri bu dosyayı kullanarak daha iyi ve daha doğru bilgiler sunabilir.**
