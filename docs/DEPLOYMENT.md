@@ -86,14 +86,14 @@ NEXT_PUBLIC_SITE_URL=
 ```
 DATABASE_URL = [Vercel Postgres'ten alınacak]
 NEXTAUTH_SECRET = [rastgele güçlü string]
-NEXTAUTH_URL = https://yourdomain.com
+NEXTAUTH_URL = https://profesyonelevdenevenakliyat.com
 SMTP_HOST = smtp.gmail.com
 SMTP_PORT = 587
 SMTP_USER = your-email@gmail.com
 SMTP_PASS = your-app-password
 GOOGLE_MAPS_API_KEY = your-api-key
-ADMIN_EMAIL = admin@yourdomain.com
-NEXT_PUBLIC_SITE_URL = https://yourdomain.com
+ADMIN_EMAIL = admin@profesyonelevdenevenakliyat.com
+NEXT_PUBLIC_SITE_URL = https://profesyonelevdenevenakliyat.com
 ```
 
 **NEXTAUTH_SECRET Oluşturma:**
@@ -209,9 +209,9 @@ Domain bağlandıktan sonra otomatik aktif olur.
 Domain bağlandıktan sonra:
 
 1. **Environment Variables** → `NEXTAUTH_URL`
-2. Değeri güncelleyin: `https://yourdomain.com`
+2. Değeri güncelleyin: `https://profesyonelevdenevenakliyat.com`
 3. **Environment Variables** → `NEXT_PUBLIC_SITE_URL`
-4. Değeri güncelleyin: `https://yourdomain.com`
+4. Değeri güncelleyin: `https://profesyonelevdenevenakliyat.com`
 5. **Redeploy** butonuna tıklayın
 
 ---
@@ -380,7 +380,7 @@ sudo nano /etc/nginx/sites-available/nakliyat
 ```nginx
 server {
     listen 80;
-    server_name yourdomain.com www.yourdomain.com;
+    server_name profesyonelevdenevenakliyat.com www.profesyonelevdenevenakliyat.com;
 
     location / {
         proxy_pass http://localhost:3000;
@@ -414,7 +414,7 @@ sudo systemctl restart nginx
 sudo apt-get install certbot python3-certbot-nginx
 
 # SSL sertifikası al
-sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
+sudo certbot --nginx -d profesyonelevdenevenakliyat.com -d www.profesyonelevdenevenakliyat.com
 
 # Otomatik yenileme
 sudo certbot renew --dry-run

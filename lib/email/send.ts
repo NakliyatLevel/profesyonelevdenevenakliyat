@@ -55,9 +55,11 @@ export async function sendContactEmail(data: {
     })
   )
 
+  const siteName = (await prisma.siteSetting.findUnique({ where: { key: 'site_title' }, select: { value: true } }))?.value || 'Site'
+
   return await sendEmail({
     to: (await prisma.siteSetting.findUnique({ where: { key: 'smtp_to' }, select: { value: true } }))?.value || process.env.SMTP_USER || '',
-    subject: `Yeni İletişim Formu - ${data.name}`,
+    subject: `${siteName} - İletişim Formu`,
     html,
   })
 }
@@ -84,9 +86,11 @@ export async function sendQuoteEmail(data: {
     })
   )
 
+  const siteName = (await prisma.siteSetting.findUnique({ where: { key: 'site_title' }, select: { value: true } }))?.value || 'Site'
+
   return await sendEmail({
     to: (await prisma.siteSetting.findUnique({ where: { key: 'smtp_to' }, select: { value: true } }))?.value || process.env.SMTP_USER || '',
-    subject: `Yeni Teklif Talebi - ${data.name}`,
+    subject: `${siteName} - Teklif Formu`,
     html,
   })
 }
@@ -115,9 +119,11 @@ export async function sendHeroQuickQuoteEmail(data: {
     })
   )
 
+  const siteName = (await prisma.siteSetting.findUnique({ where: { key: 'site_title' }, select: { value: true } }))?.value || 'Site'
+
   return await sendEmail({
     to: (await prisma.siteSetting.findUnique({ where: { key: 'smtp_to' }, select: { value: true } }))?.value || process.env.SMTP_USER || '',
-    subject: `Hero Teklif Talebi - ${data.fullName}`,
+    subject: `${siteName} - Hızlı Teklif Formu`,
     html,
   })
 }

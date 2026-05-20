@@ -6,7 +6,7 @@ Bu doküman, admin panelinin nasıl kullanılacağını detaylı olarak açıkla
 
 ### Admin Paneline Erişim
 
-**URL:** `https://yourdomain.com/karakar`
+**URL:** `https://profesyonelevdenevenakliyat.com/karakar`
 
 **İlk Giriş Bilgileri:**
 - Email: `admin@example.com`
@@ -521,12 +521,12 @@ Diğer modüllerle aynı şekilde.
 
 - **Site Başlığı:** Tarayıcı sekmesinde görünür
 - **Şirket Adı:** Resmi şirket adı
-- **Domain:** yourdomain.com
+- **Domain:** profesyonelevdenevenakliyat.com
 
 ### İletişim Bilgileri
 
 - **Telefon:** +90 555 123 4567
-- **Email:** info@yourdomain.com
+- **Email:** info@profesyonelevdenevenakliyat.com
 - **WhatsApp:** +90 555 123 4567
 - **Adres:** Tam adres
 
@@ -578,9 +578,9 @@ Diğer modüllerle aynı şekilde.
 
 ### Özel Sunucu SMTP
 
-- **Host:** mail.yourdomain.com
+- **Host:** mail.profesyonelevdenevenakliyat.com
 - **Port:** 465 (SSL) veya 587 (TLS)
-- **Email:** info@yourdomain.com
+- **Email:** info@profesyonelevdenevenakliyat.com
 - **Şifre:** Email şifresi
 
 ### Test Email

@@ -38,8 +38,8 @@ const services = {
     { name: 'Villa Taşımacılığı', slug: 'villa-tasimaciligi', icon: Hotel },
     { name: 'Yalı Taşımacılığı', slug: 'yali-tasimaciligi', icon: Waves },
     { name: 'Parça Eşya Taşımacılığı', slug: 'parca-esya-tasimaciligi', icon: Package },
-    { name: 'Şehir içi Evden Eve Nakliyat', slug: 'sehir-ici-nakliyat', icon: Route },
-    { name: 'Şehirler Arası Evden Eve Nakliyat', slug: 'sehirler-arasi-nakliyat', icon: Globe },
+    { name: 'Şehir içi Evden Eve Nakliyat', slug: 'sehir-ici-evden-eve-nakliyat', icon: Route },
+    { name: 'Şehirler Arası Evden Eve Nakliyat', slug: 'sehirler-arasi-evden-eve-nakliyat', icon: Globe },
   ],
   kurumsal: [
     { name: 'Ofis Taşımacılığı', slug: 'ofis-tasimaciligi', icon: Briefcase },

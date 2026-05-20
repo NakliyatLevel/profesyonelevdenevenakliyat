@@ -1,8 +1,8 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
-import { ChevronRight, ChevronLeft, Check, User, MapPin, Package, Settings, FileText, Phone, Mail, Calendar, Home, Building2, Truck, Box } from 'lucide-react'
+import { ChevronRight, ChevronLeft, Check, User, MapPin, Package, Settings, FileText, Phone, Mail, Calendar, Home, Building2, Truck, Box, MessageCircle } from 'lucide-react'
 import { toast } from 'sonner'
 
 interface FormData {
@@ -49,6 +49,8 @@ const steps = [
 export default function QuoteForm() {
   const [currentStep, setCurrentStep] = useState(1)
   const [loading, setLoading] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
+  const [settings, setSettings] = useState<any>({})
   const [formData, setFormData] = useState<FormData>({
     fullName: '',
     phone: '',
@@ -74,6 +76,15 @@ export default function QuoteForm() {
     needsInsurance: false,
     additionalNotes: '',
   })
+
+  useEffect(() => {
+    fetch('/api/settings')
+      .then((res) => res.json())
+      .then((data) => {
+        setSettings(data)
+      })
+      .catch(() => {})
+  }, [])
 
   const nextStep = () => {
     if (validateStep()) {
@@ -124,35 +135,8 @@ export default function QuoteForm() {
 
       if (!response.ok) throw new Error('Gönderim başarısız')
 
+      setSubmitted(true)
       toast.success('Teklif talebiniz alındı! En kısa sürede size dönüş yapacağız.')
-      
-      // Form sıfırlama
-      setFormData({
-        fullName: '',
-        phone: '',
-        email: '',
-        preferredDate: '',
-        fromAddress: '',
-        fromFloor: '0',
-        fromElevator: false,
-        toAddress: '',
-        toFloor: '0',
-        toElevator: false,
-        distance: '',
-        propertyType: 'apartment',
-        rooms: '1',
-        furnitureCount: '',
-        hasFragileItems: false,
-        hasPiano: false,
-        hasAntiques: false,
-        specialItems: '',
-        needsPacking: false,
-        needsDisassembly: false,
-        needsStorage: false,
-        needsInsurance: false,
-        additionalNotes: '',
-      })
-      setCurrentStep(1)
     } catch (error) {
       toast.error('Bir hata oluştu, lütfen tekrar deneyin')
     } finally {
@@ -558,7 +542,7 @@ export default function QuoteForm() {
         )}
 
         {/* Step 5: Özet */}
-        {currentStep === 5 && (
+        {currentStep === 5 && !submitted && (
           <div className="space-y-6 animate-fadeIn">
             <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-lg border border-primary/20">
               <h3 className="text-xl font-bold mb-4 text-primary">Teklif Özeti</h3>
@@ -631,6 +615,95 @@ export default function QuoteForm() {
               <p className="text-sm text-yellow-800">
                 <strong>Not:</strong> Bu bilgiler doğrultusunda size en uygun teklifi hazırlayacağız. Detaylı fiyat bilgisi için ekibimiz en kısa sürede sizinle iletişime geçecektir.
               </p>
+            </div>
+          </div>
+        )}
+
+        {/* Step 5: Başarı Mesajı */}
+        {currentStep === 5 && submitted && (
+          <div className="space-y-6 animate-fadeIn">
+            <div className="text-center space-y-6">
+              <div className="flex justify-center">
+                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
+                  <Check className="w-10 h-10 text-green-600" />
+                </div>
+              </div>
+              
+              <div className="space-y-2">
+                <h3 className="text-2xl font-bold text-foreground">Mailiniz İletildi!</h3>
+                <p className="text-lg text-muted-foreground">Teklif talebiniz başarıyla alındı.</p>
+              </div>
+
+              <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg space-y-4">
+                <p className="text-sm text-blue-900">
+                  <strong>En kısa sürede sizinle iletişime geçeceğiz.</strong> Aşağıdaki iletişim kanallarından bize ulaşabilirsiniz:
+                </p>
+                
+                <div className="space-y-3">
+                  {settings.phone && (
+                    <a 
+                      href={`tel:${settings.phone.replace(/\s/g, '')}`}
+                      className="flex items-center gap-3 p-3 bg-white rounded-lg hover:bg-blue-50 transition"
+                    >
+                      <Phone className="w-5 h-5 text-primary" />
+                      <div>
+                        <p className="font-semibold text-sm text-foreground">Telefon</p>
+                        <p className="text-sm text-muted-foreground">{settings.phone}</p>
+                      </div>
+                    </a>
+                  )}
+                  
+                  {settings.whatsapp && (
+                    <a 
+                      href={`https://wa.me/${settings.whatsapp.toString().replace(/\s/g, '')}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 p-3 bg-white rounded-lg hover:bg-blue-50 transition"
+                    >
+                      <MessageCircle className="w-5 h-5 text-emerald-600" />
+                      <div>
+                        <p className="font-semibold text-sm text-foreground">WhatsApp</p>
+                        <p className="text-sm text-muted-foreground">{settings.whatsapp}</p>
+                      </div>
+                    </a>
+                  )}
+                </div>
+              </div>
+
+              <Button 
+                onClick={() => {
+                  setSubmitted(false)
+                  setCurrentStep(1)
+                  setFormData({
+                    fullName: '',
+                    phone: '',
+                    email: '',
+                    preferredDate: '',
+                    fromAddress: '',
+                    fromFloor: '0',
+                    fromElevator: false,
+                    toAddress: '',
+                    toFloor: '0',
+                    toElevator: false,
+                    distance: '',
+                    propertyType: 'apartment',
+                    rooms: '1',
+                    furnitureCount: '',
+                    hasFragileItems: false,
+                    hasPiano: false,
+                    hasAntiques: false,
+                    specialItems: '',
+                    needsPacking: false,
+                    needsDisassembly: false,
+                    needsStorage: false,
+                    needsInsurance: false,
+                    additionalNotes: '',
+                  })
+                }}
+                className="w-full"
+              >
+                Yeni Teklif Talep Et
+              </Button>
             </div>
           </div>
         )}

@@ -6,7 +6,7 @@ Bu doküman, projedeki tüm API endpoint'lerini detaylı olarak açıklar.
 
 ### Base URL
 - **Development:** `http://localhost:3000/api`
-- **Production:** `https://yourdomain.com/api`
+- **Production:** `https://profesyonelevdenevenakliyat.com/api`
 
 ### Response Format
 

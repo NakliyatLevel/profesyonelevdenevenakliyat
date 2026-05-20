@@ -9,7 +9,13 @@ export default async function AdminLayout({
 }: {
   children: React.ReactNode
 }) {
-  const session = await auth()
+  let session = null
+
+  try {
+    session = await auth()
+  } catch (error) {
+    console.error('[AdminLayout] auth() failed', error)
+  }
 
   if (!session?.user) {
     redirect('/karakar/login')
