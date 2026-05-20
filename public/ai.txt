@@ -1,0 +1,451 @@
+# AI Bot Erişim Kuralları - Evden Eve Nakliyat
+# AI Bot Access Rules for Professional Moving Services
+
+---
+
+## 🤖 AI BOT KONTROL POLİSİ
+## AI Bot Control Policy
+
+### Genel Kurallar / General Rules
+
+# Google AI Modu (Google AI Mode) - Kontrollü Erişim
+# Google AI Mode - Controlled Access
+User-agent: Google-Extended
+Allow: /
+Disallow: /karakar/
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cache/
+Disallow: /uploads/private/
+Allow: /llms.txt
+Allow: /ai.txt
+Allow: /robots.txt
+Allow: /sitemap.xml
+Allow: /public/
+
+# Crawl-delay ve Request-rate
+Crawl-delay: 2
+Request-rate: 1/5s
+
+---
+
+## 📋 İZİN VERİLEN SAYFALAR
+## ALLOWED PAGES
+
+### Genel Sayfalar / Public Pages
+Allow: /
+Allow: /hakkimizda
+Allow: /hizmetlerimiz
+Allow: /cozumlerimiz
+Allow: /hizmet-bolgeleri
+Allow: /bolge/*
+Allow: /hizmet/*
+Allow: /cozum/*
+Allow: /teklif-al
+Allow: /iletisim
+Allow: /blog
+Allow: /blog/*
+Allow: /galeri
+Allow: /sss
+Allow: /referanslar
+
+### Statik Dosyalar / Static Files
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /fonts/
+Allow: /public/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.woff$
+Allow: /*.woff2$
+Allow: /*.ttf$
+Allow: /*.eot$
+Allow: /*.svg$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.webp$
+
+### Bilgilendirme Dosyaları / Information Files
+Allow: /llms.txt
+Allow: /ai.txt
+Allow: /robots.txt
+Allow: /sitemap.xml
+Allow: /sitemap-*.xml
+Allow: /feed.xml
+Allow: /rss.xml
+
+---
+
+## 🚫 YASAKLI SAYFALAR
+## DISALLOWED PAGES
+
+### Admin Paneli / Admin Panel
+Disallow: /karakar/
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /settings/
+Disallow: /manage/
+
+### API Endpoints
+Disallow: /api/
+Disallow: /api/*
+Disallow: /_api/
+Disallow: /rest/
+
+### Özel ve Gizli Sayfalar / Private Pages
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cache/
+Disallow: /backup/
+Disallow: /uploads/private/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /config/
+Disallow: /database/
+
+### Sistem Dosyaları / System Files
+Disallow: /*.json$
+Disallow: /*.xml$ (except sitemap and feed)
+Disallow: /*.sql$
+Disallow: /*.db$
+Disallow: /*.log$
+Disallow: /*.bak$
+Disallow: /*.tmp$
+Disallow: /*.zip$
+Disallow: /*.rar$
+Disallow: /*.tar$
+Disallow: /*.gz$
+
+### Geçici Dosyalar / Temporary Files
+Disallow: /tmp/
+Disallow: /temp/
+Disallow: /session/
+Disallow: /cookies/
+
+---
+
+## 🔐 GOOGLE AI MODU UYARISI
+## GOOGLE AI MODE WARNING
+
+### Kontrol Edilmiş Erişim / Controlled Access
+
+Bu site, Google AI Modu ve diğer AI botlarının erişimini kontrol etmektedir.
+
+This website controls access for Google AI Mode and other AI bots.
+
+**Kurallar / Rules:**
+
+1. **Site İçinde Kalma / Stay Within Site**
+   - AI botları sadece izin verilen sayfaları ziyaret edebilir
+   - AI bots can only visit allowed pages
+   - Admin paneline erişim yasaktır
+   - Access to admin panel is prohibited
+   - API endpoints erişim yasaktır
+   - Access to API endpoints is prohibited
+
+2. **Veri Çıkarma Yasağı / No Data Extraction**
+   - Müşteri verilerinin çıkarılması yasaktır
+   - Customer data extraction is prohibited
+   - Özel bilgilerin toplanması yasaktır
+   - Collection of private information is prohibited
+   - İletişim bilgilerinin otomatik olarak toplanması yasaktır
+   - Automatic collection of contact information is prohibited
+
+3. **Hızlı Erişim Sınırlaması / Rate Limiting**
+   - Crawl-delay: 2 saniye
+   - Crawl-delay: 2 seconds
+   - Request-rate: 1 istek / 5 saniye
+   - Request-rate: 1 request / 5 seconds
+   - Aşırı yükleme yasaktır
+   - Overloading is prohibited
+
+4. **Saygılı Davranış / Respectful Behavior**
+   - User-Agent başlığı doğru şekilde gönderilmeli
+   - User-Agent header must be sent correctly
+   - Robots.txt kurallarına uyulmalı
+   - Must comply with robots.txt rules
+   - İçerik manipülasyonu yasaktır
+   - Content manipulation is prohibited
+
+---
+
+## 📊 İZİN VERİLEN AI BOTLARI
+## ALLOWED AI BOTS
+
+### Google AI Bots
+- User-agent: Google-Extended
+- User-agent: Googlebot
+- User-agent: Googlebot-Image
+- User-agent: Googlebot-Mobile
+- User-agent: Googlebot-News
+- User-agent: Googlebot-Video
+
+### Diğer Arama Motoru Botları / Other Search Engine Bots
+- User-agent: Bingbot
+- User-agent: Slurp
+- User-agent: DuckDuckBot
+- User-agent: Baiduspider
+- User-agent: YandexBot
+- User-agent: Sogou
+- User-agent: Exabot
+
+### Sosyal Medya Botları / Social Media Bots
+- User-agent: facebookexternalhit
+- User-agent: Twitterbot
+- User-agent: LinkedInBot
+- User-agent: WhatsApp
+- User-agent: Telegram
+- User-agent: Slackbot
+
+### Diğer İzin Verilen Botlar / Other Allowed Bots
+- User-agent: *
+- Allow: / (with restrictions)
+- Disallow: /karakar/
+- Disallow: /api/
+
+---
+
+## ⚠️ YASAKLI AI BOTLARI
+## DISALLOWED AI BOTS
+
+### Kötü Niyetli Botlar / Malicious Bots
+- User-agent: AhrefsBot
+- User-agent: SemrushBot
+- User-agent: DotBot
+- User-agent: MJ12bot
+- User-agent: SiteAuditBot
+- User-agent: SEMrushBot-BA
+- User-agent: SEMrushBot-SA
+- User-agent: SEMrushBot-SI
+- User-agent: SEMrushBot-CT
+- User-agent: SEMrushBot-PL
+- User-agent: SEMrushBot-FR
+- User-agent: SEMrushBot-DE
+- User-agent: SEMrushBot-ES
+- User-agent: SEMrushBot-RU
+- User-agent: SEMrushBot-KR
+- User-agent: SEMrushBot-JA
+- User-agent: SEMrushBot-ZH
+- User-agent: SEMrushBot-AR
+- User-agent: SEMrushBot-TR
+
+### Spam Botları / Spam Bots
+- User-agent: MJ12bot
+- User-agent: AhrefsBot
+- User-agent: SemrushBot
+- User-agent: DotBot
+- User-agent: Majestic
+- User-agent: Screaming Frog
+
+### Veri Çıkarma Botları / Data Scraping Bots
+- User-agent: curl
+- User-agent: wget
+- User-agent: python-requests
+- User-agent: scrapy
+- User-agent: selenium
+- User-agent: phantomjs
+- User-agent: headlesschrome
+
+---
+
+## 🎯 GOOGLE AI MODU İÇİN ÖZEL KURALLAR
+## SPECIAL RULES FOR GOOGLE AI MODE
+
+### Erişim Kontrol / Access Control
+
+```
+User-agent: Google-Extended
+Allow: /
+Allow: /hakkimizda
+Allow: /hizmetlerimiz
+Allow: /cozumlerimiz
+Allow: /hizmet-bolgeleri
+Allow: /bolge/*
+Allow: /hizmet/*
+Allow: /cozum/*
+Allow: /teklif-al
+Allow: /iletisim
+Allow: /blog
+Allow: /blog/*
+Allow: /galeri
+Allow: /sss
+Allow: /referanslar
+Allow: /llms.txt
+Allow: /ai.txt
+Allow: /robots.txt
+Allow: /sitemap.xml
+
+Disallow: /karakar/
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cache/
+Disallow: /*.json$
+Disallow: /*.env
+Disallow: /config/
+Disallow: /database/
+
+Crawl-delay: 2
+Request-rate: 1/5s
+```
+
+### Veri Koruma / Data Protection
+
+1. **Müşteri Bilgileri / Customer Information**
+   - İletişim formlarından gelen veriler korunmalı
+   - Data from contact forms must be protected
+   - Teklif taleplerinden gelen veriler korunmalı
+   - Data from quote requests must be protected
+   - Kişisel bilgiler çıkarılamaz
+   - Personal information cannot be extracted
+
+2. **Kurumsal Bilgiler / Corporate Information**
+   - Fiyatlandırma bilgileri korunmalı
+   - Pricing information must be protected
+   - İç yönetim bilgileri korunmalı
+   - Internal management information must be protected
+   - Operasyonel detaylar korunmalı
+   - Operational details must be protected
+
+3. **Finansal Bilgiler / Financial Information**
+   - Banka bilgileri korunmalı
+   - Bank information must be protected
+   - Ödeme bilgileri korunmalı
+   - Payment information must be protected
+   - Muhasebe verileri korunmalı
+   - Accounting data must be protected
+
+---
+
+## 📞 İLETİŞİM VE ŞIKAYETLER
+## CONTACT AND COMPLAINTS
+
+### Bot Davranışı Şikayeti / Bot Behavior Complaint
+
+Eğer bir AI bot veya web crawler'ın uygunsuz davranışını gözlemlerseniz:
+
+If you observe inappropriate behavior from an AI bot or web crawler:
+
+- **Email**: bilgi@levelnakliyat.com.tr
+- **Telefon / Phone**: +90 555 123 4567
+- **Web**: https://profesyonelevdenevenakliyat.com/iletisim
+
+**Lütfen şunları belirtin / Please specify:**
+1. Bot'un User-Agent bilgisi
+2. Bot'un IP adresi
+3. Erişmeye çalıştığı sayfalar
+4. Şikayetin tarihi ve saati
+5. Sorunun açıklaması
+
+---
+
+## 🔍 GOOGLE AI MODU UYUMLULUĞU
+## GOOGLE AI MODE COMPLIANCE
+
+### Uyum Kontrol Listesi / Compliance Checklist
+
+✅ **Robots.txt Uyumluluğu**
+- Robots.txt dosyası mevcuttur
+- Robots.txt file exists
+- Google-Extended user-agent tanımlanmıştır
+- Google-Extended user-agent is defined
+- Crawl-delay ve Request-rate belirtilmiştir
+- Crawl-delay and Request-rate are specified
+
+✅ **Ai.txt Uyumluluğu**
+- Ai.txt dosyası mevcuttur
+- Ai.txt file exists
+- Erişim kuralları açık şekilde tanımlanmıştır
+- Access rules are clearly defined
+- Yasaklı sayfalar belirtilmiştir
+- Prohibited pages are specified
+
+✅ **Veri Koruma**
+- Gizli bilgiler korunmaktadır
+- Confidential information is protected
+- Admin paneli erişim yasaktır
+- Admin panel access is prohibited
+- API endpoints korunmaktadır
+- API endpoints are protected
+
+✅ **İçerik Kalitesi**
+- Orijinal içerik mevcuttur
+- Original content exists
+- Düzenli güncellenmektedir
+- Regularly updated
+- Doğru bilgiler sunulmaktadır
+- Accurate information is provided
+
+✅ **Teknik Uyum**
+- Sitemap mevcuttur
+- Sitemap exists
+- Meta etiketler doğru şekilde kullanılmaktadır
+- Meta tags are used correctly
+- Canonical URL'ler tanımlanmıştır
+- Canonical URLs are defined
+- Schema.org JSON-LD kullanılmaktadır
+- Schema.org JSON-LD is used
+
+---
+
+## 📝 GÜNCELLEME BİLGİSİ
+## UPDATE INFORMATION
+
+- **Son Güncelleme / Last Update**: 20 Mayıs 2026 / May 20, 2026
+- **Sürüm / Version**: 1.0
+- **Dil / Language**: Türkçe / Turkish + English
+- **Erişilebilirlik / Accessibility**: Public (Tüm AI botları erişebilir / All AI bots can access)
+- **Güncelleme Sıklığı / Update Frequency**: Aylık / Monthly
+
+---
+
+## 🎯 AMAÇ
+## PURPOSE
+
+Bu ai.txt dosyası, Evden Eve Nakliyat web sitesinin:
+
+This ai.txt file ensures that the Professional Moving Services website:
+
+1. **AI Botlarını Kontrol Eder / Controls AI Bots**
+   - Hangi sayfaların ziyaret edilebileceğini belirtir
+   - Specifies which pages can be visited
+   - Hangi verilerin korunduğunu açıklar
+   - Explains which data is protected
+
+2. **Google AI Modu'nu Yönetir / Manages Google AI Mode**
+   - Site içinde kalmasını sağlar
+   - Ensures it stays within the site
+   - Gizli bilgilere erişmesini engeller
+   - Prevents access to confidential information
+   - Saygılı davranışını zorunlu kılar
+   - Enforces respectful behavior
+
+3. **Veri Güvenliğini Sağlar / Ensures Data Security**
+   - Müşteri bilgilerini korur
+   - Protects customer information
+   - Kurumsal bilgileri korur
+   - Protects corporate information
+   - Finansal verileri korur
+   - Protects financial data
+
+4. **Uyum Sağlar / Ensures Compliance**
+   - Google AI Mode politikasına uyum sağlar
+   - Complies with Google AI Mode policy
+   - Uluslararası standartlara uyum sağlar
+   - Complies with international standards
+   - Etik kurallara uyum sağlar
+   - Complies with ethical rules
+
+---
+
+**Bu dosya, Evden Eve Nakliyat web sitesinin AI botlarından korunmasını ve Google AI Modu'nun sorumlu bir şekilde çalışmasını sağlamaktadır.**
+
+**This file ensures that the Professional Moving Services website is protected from AI bots and that Google AI Mode operates responsibly.**
