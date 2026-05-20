@@ -11,6 +11,7 @@ const FALLBACKS = {
   addressRegion: 'İstanbul',
   addressPostalCode: '34394',
   addressCountry: 'TR',
+  logoPath: '/placeholder-logo.svg',
 }
 
 const sanitizeDomain = (value?: string) => {
@@ -45,7 +46,7 @@ export async function generateLocalBusinessSchema() {
   const description = settings.seo_description || FALLBACKS.description
   const phone = settings.phone || FALLBACKS.phone
   const email = settings.email || FALLBACKS.email
-  const logoUrl = buildAbsoluteUrl(settings.logo_url, domain)
+  const logoUrl = buildAbsoluteUrl(settings.logo_url || FALLBACKS.logoPath, domain)
   const sameAs = [settings.facebook, settings.instagram, settings.twitter, settings.linkedin, settings.youtube].filter(Boolean)
 
   const schema: Record<string, unknown> = {
