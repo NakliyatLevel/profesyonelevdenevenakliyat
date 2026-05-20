@@ -11,12 +11,16 @@ async function main() {
   
   const admin = await prisma.user.upsert({
     where: { email: 'admin@example.com' },
-    update: {},
+    update: {
+      updatedAt: new Date(),
+    },
     create: {
+      id: 'admin-user',
       email: 'admin@example.com',
       name: 'Admin',
       password: hashedPassword,
       role: 'admin',
+      updatedAt: new Date(),
     },
   })
 
@@ -42,10 +46,16 @@ async function main() {
   ]
 
   for (const setting of siteSettings) {
+    const timestamp = new Date()
     await prisma.siteSetting.upsert({
       where: { key: setting.key },
-      update: { value: setting.value },
-      create: setting,
+      update: { value: setting.value, updatedAt: timestamp },
+      create: {
+        id: setting.key,
+        key: setting.key,
+        value: setting.value,
+        updatedAt: timestamp,
+      },
     })
   }
 
@@ -62,10 +72,11 @@ async function main() {
   ]
 
   for (const feature of features) {
+    const timestamp = new Date()
     await prisma.feature.upsert({
       where: { id: feature.id },
-      update: feature,
-      create: feature,
+      update: { ...feature, updatedAt: timestamp },
+      create: { ...feature, updatedAt: timestamp },
     })
   }
 
@@ -80,10 +91,11 @@ async function main() {
   ]
 
   for (const stat of statistics) {
+    const timestamp = new Date()
     await prisma.statistic.upsert({
       where: { id: stat.id },
-      update: stat,
-      create: stat,
+      update: { ...stat, updatedAt: timestamp },
+      create: { ...stat, updatedAt: timestamp },
     })
   }
 
@@ -99,10 +111,11 @@ async function main() {
   ]
 
   for (const process of processes) {
+    const timestamp = new Date()
     await prisma.process.upsert({
       where: { id: process.id },
-      update: process,
-      create: process,
+      update: { ...process, updatedAt: timestamp },
+      create: { ...process, updatedAt: timestamp },
     })
   }
 
@@ -116,10 +129,11 @@ async function main() {
   ]
 
   for (const review of reviews) {
+    const timestamp = new Date()
     await prisma.review.upsert({
       where: { id: review.id },
-      update: review,
-      create: review,
+      update: { ...review, updatedAt: timestamp },
+      create: { ...review, updatedAt: timestamp },
     })
   }
 
@@ -140,10 +154,11 @@ async function main() {
   ]
 
   for (const item of gallery) {
+    const timestamp = new Date()
     await prisma.gallery.upsert({
       where: { id: item.id },
-      update: item,
-      create: item,
+      update: { ...item, updatedAt: timestamp },
+      create: { ...item, updatedAt: timestamp },
     })
   }
 
@@ -159,10 +174,11 @@ async function main() {
   ]
 
   for (const faq of faqs) {
+    const timestamp = new Date()
     await prisma.fAQ.upsert({
       where: { id: faq.id },
-      update: faq,
-      create: faq,
+      update: { ...faq, updatedAt: timestamp },
+      create: { ...faq, updatedAt: timestamp },
     })
   }
 
