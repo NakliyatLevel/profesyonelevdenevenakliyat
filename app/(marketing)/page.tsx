@@ -239,7 +239,7 @@ export default async function HomePage() {
   const homeGalleryItems = [...prioritizedGallery, ...fallbackGalleryItems].slice(0, 4)
   
   const businessSchema = await generateLocalBusinessSchema()
-  const reviewSchema = reviews.length > 0 ? generateReviewSchema(reviews) : null
+  const reviewSchema = reviews.length > 0 ? await generateReviewSchema(reviews) : null
 
   return (
     <>

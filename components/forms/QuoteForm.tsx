@@ -630,43 +630,32 @@ export default function QuoteForm() {
               </div>
               
               <div className="space-y-2">
-                <h3 className="text-2xl font-bold text-foreground">Mailiniz İletildi!</h3>
-                <p className="text-lg text-muted-foreground">Teklif talebiniz başarıyla alındı.</p>
+                <h3 className="text-2xl font-bold text-foreground">Talebiniz Alındı</h3>
+                <p className="text-lg text-muted-foreground">
+                  Ekibimiz en kısa sürede sizinle telefon veya WhatsApp üzerinden iletişime geçecek.
+                </p>
               </div>
 
               <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg space-y-4">
                 <p className="text-sm text-blue-900">
                   <strong>En kısa sürede sizinle iletişime geçeceğiz.</strong> Aşağıdaki iletişim kanallarından bize ulaşabilirsiniz:
                 </p>
-                
-                <div className="space-y-3">
-                  {settings.phone && (
-                    <a 
-                      href={`tel:${settings.phone.replace(/\s/g, '')}`}
-                      className="flex items-center gap-3 p-3 bg-white rounded-lg hover:bg-blue-50 transition"
-                    >
-                      <Phone className="w-5 h-5 text-primary" />
-                      <div>
-                        <p className="font-semibold text-sm text-foreground">Telefon</p>
-                        <p className="text-sm text-muted-foreground">{settings.phone}</p>
-                      </div>
+
+                <div className="flex flex-col md:flex-row gap-3">
+                  <Button asChild className="flex-1">
+                    <a href={`tel:${(settings.phone || '+905554443322').replace(/\s/g, '')}`}>
+                      Hemen Ara
                     </a>
-                  )}
-                  
-                  {settings.whatsapp && (
-                    <a 
-                      href={`https://wa.me/${settings.whatsapp.toString().replace(/\s/g, '')}`}
+                  </Button>
+                  <Button asChild variant="outline" className="flex-1">
+                    <a
+                      href={`https://wa.me/${(settings.whatsapp || '+905554443322').toString().replace(/\s/g, '')}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 p-3 bg-white rounded-lg hover:bg-blue-50 transition"
                     >
-                      <MessageCircle className="w-5 h-5 text-emerald-600" />
-                      <div>
-                        <p className="font-semibold text-sm text-foreground">WhatsApp</p>
-                        <p className="text-sm text-muted-foreground">{settings.whatsapp}</p>
-                      </div>
+                      WhatsApp üzerinden Yaz
                     </a>
-                  )}
+                  </Button>
                 </div>
               </div>
 

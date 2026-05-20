@@ -383,55 +383,62 @@ export default function HeroSection({ settings }: HeroSectionProps) {
                   </form>
                 </>
               ) : (
-                <div className="flex flex-col items-center justify-center h-full space-y-6 py-8">
-                  <div className="flex justify-center">
-                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
-                      <Check className="w-8 h-8 text-green-600" />
-                    </div>
+                <div className="flex flex-col items-center text-center space-y-6 py-10">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                    <Check className="w-8 h-8 text-green-600" />
                   </div>
                   
-                  <div className="text-center space-y-2">
-                    <h3 className="text-xl font-bold text-foreground">Mailiniz İletildi!</h3>
-                    <p className="text-sm text-muted-foreground">Teklif talebiniz başarıyla alındı.</p>
+                  <div className="space-y-2">
+                    <h3 className="text-2xl font-bold text-foreground">Talebiniz Alındı</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Ekibimiz en kısa sürede telefon veya WhatsApp üzerinden sizinle iletişime geçecek.
+                    </p>
                   </div>
 
-                  <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg space-y-3 w-full">
-                    <p className="text-xs text-blue-900 font-semibold">
-                      En kısa sürede sizinle iletişime geçeceğiz. Bize ulaşabilirsiniz:
-                    </p>
-                    
-                    <div className="space-y-2">
-                      {siteSettings.phone && (
-                      <a 
-                        href={`tel:${siteSettings.phone.replace(/\s/g, '')}`}
-                        className="flex items-center gap-2 p-2 bg-white rounded hover:bg-blue-50 transition text-xs"
-                      >
-                        <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-foreground">Telefon</p>
-                          <p className="text-muted-foreground">{siteSettings.phone}</p>
-                        </div>
+                  <div className="w-full space-y-3">
+                    <a
+                      href={`tel:${(siteSettings.phone || '+905554443322').toString().replace(/\s/g, '')}`}
+                      className="flex items-center gap-3 p-3 bg-blue-50 border border-blue-200 rounded-lg hover:bg-blue-100 transition text-left"
+                    >
+                      <Phone className="w-5 h-5 text-primary" />
+                      <div>
+                        <p className="text-sm font-semibold text-foreground">Telefon</p>
+                        <p className="text-sm text-muted-foreground">{siteSettings.phone || '+90 555 444 33 22'}</p>
+                      </div>
+                    </a>
+
+                    <a
+                      href={`https://wa.me/${(siteSettings.whatsapp || '+905554443322').toString().replace(/\s/g, '')}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 p-3 bg-emerald-50 border border-emerald-200 rounded-lg hover:bg-emerald-100 transition text-left"
+                    >
+                      <MessageCircle className="w-5 h-5 text-emerald-600" />
+                      <div>
+                        <p className="text-sm font-semibold text-foreground">WhatsApp</p>
+                        <p className="text-sm text-muted-foreground">{siteSettings.whatsapp || '+90 555 444 33 22'}</p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-3 w-full">
+                    <Button asChild className="flex-1">
+                      <a href={`tel:${(siteSettings.phone || '+905554443322').toString().replace(/\s/g, '')}`}>
+                        Hemen Ara
                       </a>
-                    )}
-                    
-                    {siteSettings.whatsapp && (
-                      <a 
-                        href={`https://wa.me/${siteSettings.whatsapp.toString().replace(/\s/g, '')}`}
+                    </Button>
+                    <Button asChild variant="outline" className="flex-1">
+                      <a
+                        href={`https://wa.me/${(siteSettings.whatsapp || '+905554443322').toString().replace(/\s/g, '')}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 p-2 bg-white rounded hover:bg-blue-50 transition text-xs"
-                        >
-                          <MessageCircle className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                          <div>
-                            <p className="font-semibold text-foreground">WhatsApp</p>
-                            <p className="text-muted-foreground">{siteSettings.whatsapp}</p>
-                          </div>
-                        </a>
-                      )}
-                    </div>
+                      >
+                        WhatsApp ile Yaz
+                      </a>
+                    </Button>
                   </div>
 
-                  <Button 
+                  <Button
                     onClick={() => {
                       setHeroSubmitMessage('')
                       setHeroForm({
@@ -442,9 +449,9 @@ export default function HeroSection({ settings }: HeroSectionProps) {
                         phone: '',
                       })
                     }}
-                    className="w-full"
+                    variant="ghost"
                   >
-                    Yeni Teklif Talep Et
+                    Yeni Talep Oluştur
                   </Button>
                 </div>
               )}

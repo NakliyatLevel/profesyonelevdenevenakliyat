@@ -1,35 +1,103 @@
 import { getSiteSettings } from '@/lib/settings'
 
+const FALLBACKS = {
+  domain: 'https://profesyonelevdenevenakliyat.com',
+  companyName: 'Profesyonel Evden Eve Nakliyat',
+  description: 'Profesyonel evden eve nakliyat çözümleri ile İstanbul ve tüm Türkiye\'de yanınızdayız.',
+  phone: '+90 555 123 4567',
+  email: 'bilgi@profesyonelevdenevenakliyat.com',
+  address: 'Loft Residence, Esentepe Mah. Büyükdere Cad. No:201 34394 Şişli / İstanbul',
+  addressLocality: 'Şişli',
+  addressRegion: 'İstanbul',
+  addressPostalCode: '34394',
+  addressCountry: 'TR',
+}
+
+const sanitizeDomain = (value?: string) => {
+  if (!value) return FALLBACKS.domain
+  const trimmed = value.trim()
+  if (/^https?:\/\//i.test(trimmed)) return trimmed
+  return `https://${trimmed.replace(/^\/+/, '')}`
+}
+
+const buildAbsoluteUrl = (path?: string, domain?: string) => {
+  if (!path) return undefined
+  if (/^https?:\/\//i.test(path)) return path
+  if (path.startsWith('//')) return `https:${path}`
+  const base = sanitizeDomain(domain)
+  if (path.startsWith('/')) return `${base}${path}`
+  return `${base}/${path}`
+}
+
+const buildAddress = (settings: Record<string, string>) => ({
+  '@type': 'PostalAddress',
+  streetAddress: settings.address || FALLBACKS.address,
+  addressLocality: settings.address_locality || FALLBACKS.addressLocality,
+  addressRegion: settings.address_region || FALLBACKS.addressRegion,
+  postalCode: settings.address_postal_code || FALLBACKS.addressPostalCode,
+  addressCountry: settings.address_country || FALLBACKS.addressCountry,
+})
+
 export async function generateLocalBusinessSchema() {
   const settings = await getSiteSettings()
+  const domain = sanitizeDomain(settings.domain)
+  const companyName = settings.company_name || settings.site_title || FALLBACKS.companyName
+  const description = settings.seo_description || FALLBACKS.description
+  const phone = settings.phone || FALLBACKS.phone
+  const email = settings.email || FALLBACKS.email
+  const logoUrl = buildAbsoluteUrl(settings.logo_url, domain)
+  const sameAs = [settings.facebook, settings.instagram, settings.twitter, settings.linkedin, settings.youtube].filter(Boolean)
 
-  return {
+  const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'MovingCompany',
-    name: settings.company_name || settings.site_title,
-    description: settings.seo_description,
-    url: settings.domain || process.env.NEXT_PUBLIC_SITE_URL,
-    telephone: settings.phone,
-    email: settings.email,
-    address: settings.address ? {
-      '@type': 'PostalAddress',
-      streetAddress: settings.address,
-    } : undefined,
+    '@id': `${domain}#moving-company`,
+    name: companyName,
+    description,
+    url: domain,
+    telephone: phone,
+    email,
+    address: buildAddress(settings),
     priceRange: '$$',
     areaServed: {
       '@type': 'Country',
       name: 'Turkey',
     },
   }
+
+  if (logoUrl) {
+    schema.image = logoUrl
+    schema.logo = {
+      '@type': 'ImageObject',
+      url: logoUrl,
+    }
+  }
+
+  if (sameAs.length) {
+    schema.sameAs = sameAs
+  }
+
+  return schema
 }
 
-export function generateReviewSchema(reviews: any[]) {
+export async function generateReviewSchema(reviews: any[]) {
+  const settings = await getSiteSettings()
+  const domain = sanitizeDomain(settings.domain)
+  const companyName = settings.company_name || settings.site_title || FALLBACKS.companyName
+  const reviewTarget = {
+    '@type': 'MovingCompany',
+    '@id': `${domain}#moving-company`,
+    name: companyName,
+    url: domain,
+  }
+
   return {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     itemListElement: reviews.map((review, index) => ({
       '@type': 'Review',
       position: index + 1,
+      itemReviewed: reviewTarget,
       author: {
         '@type': 'Person',
         name: review.name,
@@ -41,7 +109,7 @@ export function generateReviewSchema(reviews: any[]) {
         worstRating: 1,
       },
       reviewBody: review.comment,
-      datePublished: review.createdAt,
+      datePublished: new Date(review.createdAt).toISOString(),
     })),
   }
 }
