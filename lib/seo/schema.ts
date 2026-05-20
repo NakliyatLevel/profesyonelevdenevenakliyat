@@ -67,11 +67,13 @@ export async function generateLocalBusinessSchema() {
   }
 
   if (logoUrl) {
-    schema.image = logoUrl
-    schema.logo = {
+    const imageObject = {
       '@type': 'ImageObject',
       url: logoUrl,
     }
+
+    schema.image = imageObject
+    schema.logo = imageObject
   }
 
   if (sameAs.length) {
